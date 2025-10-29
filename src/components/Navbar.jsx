@@ -33,6 +33,8 @@ export default function Navbar() {
           </a>
         </nav>
       </div>
+      {/* Animated underline for a premium feel */}
+      <div className="pointer-events-none h-px w-full bg-gradient-to-r from-transparent via-white/40 to-transparent opacity-60" />
     </header>
   );
 }

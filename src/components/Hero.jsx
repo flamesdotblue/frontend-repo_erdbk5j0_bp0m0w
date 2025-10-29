@@ -3,17 +3,21 @@ import { motion } from 'framer-motion';
 
 export default function Hero() {
   return (
-    <section id="top" className="relative min-h-[88vh] flex items-center overflow-hidden">
-      {/* Spline 3D Object */}
+    <section id="top" className="relative min-h-[92vh] flex items-center overflow-hidden">
+      {/* Spline 3D Cover Background (full-bleed) */}
       <div className="absolute inset-0">
         <Spline
-          scene="https://prod.spline.design/VyGeZv58yuk8j7Yy/scene.splinecode"
+          scene="https://prod.spline.design/BWzdo650n-g-M9RS/scene.splinecode"
           style={{ width: '100%', height: '100%' }}
         />
       </div>
 
-      {/* Subtle gradient to improve legibility */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80" />
+      {/* Legibility and thematic overlays with warm tint matching the beams */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/80" />
+      <div className="pointer-events-none absolute inset-0" style={{
+        background:
+          'radial-gradient(80% 60% at 20% 10%, rgba(255,95,31,0.10) 0%, rgba(255,51,73,0.08) 30%, rgba(0,0,0,0) 70%)',
+      }} />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 py-24 md:py-36">
         <motion.div
@@ -22,12 +26,12 @@ export default function Hero() {
           transition={{ duration: 0.6, ease: 'easeOut' }}
           className="max-w-3xl"
         >
-          <p className="text-sm uppercase tracking-widest text-white/70">Web Development • Product Engineering</p>
+          <p className="text-sm uppercase tracking-widest text-white/80">Web Development • Product Engineering</p>
           <h1 className="mt-4 text-4xl md:text-6xl font-semibold leading-tight text-white">
-            Clean, performant web experiences
+            Clean, modern experiences with real performance
           </h1>
-          <p className="mt-5 text-white/80 text-lg md:text-xl">
-            Ciphoria helps teams design and build modern web products with a focus on craftsmanship, reliability, and measurable impact.
+          <p className="mt-5 text-white/85 text-lg md:text-xl">
+            Ciphoria crafts reliable, maintainable web products—polished frontends, robust APIs, and thoughtful UX—delivered with focus and care.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
